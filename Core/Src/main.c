@@ -251,27 +251,16 @@ int main(void)
   strcpy(memtxt,  "MEM           ");
   strcpy(gpu1txt, "GPU1          ");
   strcpy(gpu2txt, "GPU2          ");
-//  cpu_hist[0]=0;cpu_hist[1]=100;cpu_hist[2]=50;cpu_hist[3]=100;
-//  mem_hist[0]=0;mem_hist[1]=100;mem_hist[2]=50;mem_hist[3]=100;
-//  gpu1_hist[0]=0;gpu1_hist[1]=100;gpu1_hist[2]=50;gpu1_hist[3]=100;
-//  gpu2_hist[0]=0;gpu2_hist[1]=100;gpu2_hist[2]=50;gpu2_hist[3]=100;
 
   ST7789_Init(320, 240);
-//  ST77xx_FillRect(150, 100, 150, 50, RED);
-//  ST77xx_FillRect(100, 150, 150, 50, GREEN);
-//  ST77xx_FillRect(50, 200, 150, 40, BLUE);
-//  ST77xx_WriteFastString(0,0,"CPU:100%",Font_7x10,WHITE,BLACK);
-//  ST77xx_WriteFastString(0,10,"CPU:100%",Font_11x18,WHITE,BLACK);
-//  ST77xx_WriteFastString(0,28,"1234567890123456789",Font_16x26,WHITE,BLACK);
-
 
   while (1)
   {
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
-	  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+	  //HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 	  drawall();
-	  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+	  //HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
 	  HAL_Delay(delay);
 	  updategraph();
   }
